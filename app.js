@@ -53,7 +53,7 @@ const store = MongoStore.create({
     crypto: {
         secret: 'thisisasecret'
     }
-})
+});
 
 store.on('error', function(e) {
     console.log('SESSION STORE ERROR', e)
