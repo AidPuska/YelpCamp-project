@@ -2,8 +2,6 @@ if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config();
 }
 
-console.log('this wil be check outed');
-
 const express = require('express');
 const mongoose = require('mongoose')
 const path = require('path');
