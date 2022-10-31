@@ -1,0 +1,32 @@
+<nav class="navbar sticky-top navbar-dark navbar-expand-lg bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><b>Yelp</b>Camp</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/campgrounds">Campgrounds</a>
+                <a class="nav-link" href="/campgrounds/new">New Campground</a>
+            </div>
+
+            <div class="navbar-nav ms-auto">
+                <% if(!currentUser) { %>
+                    <a class="nav-link" href="/login">Login</a>
+                    <a class="nav-link" href="/register">Register</a>
+                    <% } else { %>
+                        <a class="nav-link" href="/logout">Logout</a>
+                        <a href="#" class="navbar-brand">
+                            <img style="width: 20px; height: 20px;"
+                                src="https://cdn.iconscout.com/icon/free/png-256/user-3114475-2598167.png" alt="">
+                        </a>
+                        <span class="navbar-text"><a href="/profile">
+                                <%= currentUser.username %>
+                            </a></span>
+                        <% } %>
+            </div>
+        </div>
+    </div>
+</nav>
